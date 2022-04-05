@@ -1,0 +1,176 @@
+@import "./../../styles/variabiles.scss";
+
+.contacts {
+  max-width: calc(1200px + 2rem);
+  margin: 0 auto;
+  @include container;
+  h4 {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin: 200px 0 40px 0;
+    font-weight: 400;
+    z-index: 1;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      background: rgba($Color-Orange, 0.4);
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+  &__section {
+    margin-top: 230px;
+    &__title {
+      font-size: 34px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    &__typeWriter {
+      font-size: 17px;
+      color: $Color-secBlue;
+    }
+  }
+
+  &__info {
+    &__box {
+      display: flex;
+      @media (max-width: 550.99px) {
+        display: block;
+      }
+      &__data {
+        color: $Color-secBlue;
+        margin-top: 50px;
+        width: 100%;
+        max-width: 450px;
+        transition: 0.2s ease all;
+        @media (max-width: 550.99px) {
+          padding-bottom: 15px;
+          border-bottom: 1px solid $Color-Orange;
+        }
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        color: $Color-White-Default;
+        margin-bottom: 15px;
+        letter-spacing: 0.2em;
+        .iconStyle {
+          color: $Color-Orange;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__form {
+    margin-bottom: 150px;
+    span {
+      display: block;
+      color: red;
+      padding: 5px 15px;
+      border: 1px solid red;
+      margin-top: 37px;
+    }
+    input,
+    textarea {
+      background-color: transparent;
+      border-bottom: 1px solid $Color-secBlue;
+      color: $Color-White-Default;
+      margin-top: 40px;
+      font-family: $Roboto;
+      padding: 20px 0;
+      width: 100%;
+    }
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+      color: $Color-secBlue;
+    }
+    input:focus,
+    textarea:focus {
+      border-bottom: 1px solid $Color-Orange;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      overflow: visible;
+      position: relative;
+      width: 100%;
+      max-width: 200px;
+      margin-top: 40px;
+      cursor: pointer;
+      background-color: $Color-Orange;
+      .iconStyle {
+        position: absolute;
+        right: 18px;
+        color: $Color-White-Default;
+        transition: transform 0.15s;
+      }
+
+      &:hover .iconStyle {
+        transform: rotate(15deg);
+        transition: transform 0.25s;
+      }
+    }
+  }
+}
+
+button.clicked {
+  animation: bounce-in 0.3s;
+  .iconStyle {
+    animation: flyaway 1.3s linear;
+    top: -80px;
+    right: -1000px;
+  }
+}
+
+@keyframes flyaway {
+  0% {
+    transform: rotate(10deg);
+    top: 13px;
+    right: 25px;
+    height: 30px;
+  }
+  5% {
+    transform: rotate(10deg);
+    top: 13px;
+    right: 0px;
+    height: 30px;
+  }
+  20% {
+    transform: rotate(-20deg);
+    top: 13px;
+    right: -130px;
+    height: 45px;
+  }
+  40% {
+    transform: rotate(10deg);
+    top: -40px;
+    right: -280px;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(60deg);
+    top: -200px;
+    right: -1000px;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    padding-right: 30px;
+  }
+  40% {
+    padding-right: 6px;
+  }
+  50% {
+    padding-left: 30px;
+  }
+  100% {
+    padding-left: 6px;
+  }
+}

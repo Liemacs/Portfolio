@@ -1,0 +1,57 @@
+@import "./../../styles/variabiles.scss";
+
+.cart {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  margin-bottom: 40px;
+  & > p {
+    transition: 0.3s;
+    margin-top: 10px;
+  }
+  &:hover > p {
+    color: $Color-Orange;
+  }
+
+  &:hover &__content:after {
+    opacity: 0.8;
+  }
+
+  &:hover &__content__more {
+    opacity: 1;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 350px;
+    height: 183px;
+    
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    &__more {
+      position: absolute;
+      opacity: 0;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $Color-Dark-blue;
+      opacity: 0;
+      transition: 0.3s;
+    }
+  }
+}

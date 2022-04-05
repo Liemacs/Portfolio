@@ -1,0 +1,41 @@
+@import "./../../styles/variabiles.scss";
+
+.main {
+  @include baseContainer;
+  // margin: 50px auto;
+  &__content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    &__typeWriter {
+      color: $Color-secBlue;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__arrowDown {
+      position: absolute;
+      bottom: 92px;
+      left: 50%;
+      font-size: 30px;
+      animation: mouve 3s linear infinite;
+      .mouse {
+        color: $Color-Orange;
+      }
+      @keyframes mouve {
+        0% {
+          transform: translateY(-10px);
+        }
+        50% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+}

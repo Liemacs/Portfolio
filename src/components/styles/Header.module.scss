@@ -1,0 +1,116 @@
+@import "./../../styles/variabiles.scss";
+
+.header {
+  @include container;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  z-index: 100;
+  padding-bottom: 8px;
+
+  &__content {
+    overflow: hidden;
+    color: $Color-White-Default;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    position: relative;
+
+    &__logo {
+      font-family: "Questrial", sans-serif;
+      font-size: 2.5rem;
+    }
+
+    &__nav {
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba($Color-Dark-blue, 0.9);
+      backdrop-filter: blur(4px);
+      transform: translate(0);
+      transition: 0.3s ease transform;
+
+      @include breakpoint(md) {
+        transform: none;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        height: 100%;
+        position: static;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+        @include breakpoint(md) {
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: -15px;
+        }
+        li {
+          &:not(:last-child) {
+            margin-bottom: 32px;
+            @include breakpoint(md) {
+              margin-bottom: 0;
+              margin-right: 48px;
+            }
+          }
+          a {
+            line-height: 30px;
+            font-weight: 200;
+            font-size: 16px;
+            transition: 0.3s ease all;
+            &:hover,
+            &:active {
+              color: $Color-Orange;
+            }
+          }
+        }
+      }
+
+      &.isMenu {
+        transform: translate(100%);
+      }
+    }
+    &__toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      transition: 0.3s ease all;
+      position: relative;
+      margin-bottom: 5px;
+
+      &:hover {
+        color: $Color-Orange;
+      }
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+    &__socials a {
+      display: initial;
+      font-size: 25px;
+      padding: 0 15px;
+      transition: 0.3s ease all;
+      &:hover {
+        color: $Color-Orange;
+      }
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+  }
+}

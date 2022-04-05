@@ -1,0 +1,37 @@
+
+//coloros
+$Roboto: "Roboto Mono", monospace;
+$Color-Dark-blue: #222831;
+$Color-secBlue: #424f5f;
+$Color-Orange: #d65a31;
+$Color-White-Default: #eeeeee;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
+
+@mixin baseContainer {
+  max-width: calc(1200px - 1rem);
+  margin: 0 auto;
+}
+
+@mixin container {
+  background-color: $Color-Dark-blue;
+  width: 100%;
+  padding: 0 1rem;
+  @include breakpoint(md) {
+    padding: 0px 1.5rem;
+
+    .header,
+    .footer {
+      &__content {
+        @include baseContainer;
+      }
+    }
+  }
+  transition: 0.3s ease all;
+}

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto+Mono:wght@200;400;700&display=swap");
+@import "./variabiles.scss";
+@import "./normalize.scss";
+
+body {
+  font-family: $Roboto;
+  background-color: $Color-Dark-blue;
+  color: $Color-White-Default;
+}
+
+.inputText {
+  border-bottom: 1px solid red !important;
+}
+
+.inputText::-webkit-input-placeholder {
+  color: red !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $Color-Dark-blue;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $Color-Orange;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($Color-Orange, 0.5);
+}

@@ -1,0 +1,24 @@
+@import "./../../styles/variabiles.scss";
+
+.items {
+  @include container;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    column-gap: 30px;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 59px;
+    margin-bottom: -9px;
+  }
+}
+
+.delimiter {
+  border: 1px solid $Color-secBlue;
+  margin: 29px 0;
+}
