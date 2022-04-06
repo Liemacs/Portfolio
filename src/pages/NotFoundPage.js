@@ -1,7 +1,9 @@
 import React from "react";
-import Glitch from "../components/Glitch";
-import DynamicText from "../components/DynamicText";
 
+// import components
+import {DynamicText, Glitch} from "../components";
+
+// import styles
 import classes from "./stylePages/NotFoundPage.module.scss";
 
 const NotFoundPage = () => {

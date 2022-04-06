@@ -1,5 +1,6 @@
 import React from "react";
 
+// import styles
 import classes from "./styles/Glitch.module.scss"
 import classesBtn from "./styles/GlitchBtn.module.scss"
 

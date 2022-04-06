@@ -7,8 +7,8 @@
 }
 
 ul,
-li{
-list-style: none;
+li {
+  list-style: none;
 }
 
 textarea {
@@ -42,7 +42,7 @@ a {
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 code,
@@ -85,9 +85,9 @@ button {
 }
 
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   padding: 1px 6px;
 }
@@ -129,12 +129,12 @@ textarea {
   vertical-align: top;
 }
 
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-[type=color] {
+[type="color"] {
   background: inherit;
 }
 
@@ -256,4 +256,3 @@ template {
 [hidden] {
   display: none;
 }
-

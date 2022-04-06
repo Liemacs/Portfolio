@@ -1,79 +1,78 @@
 @import "./../../styles/variabiles.scss";
 
 .popup {
+  position: fixed;
+  z-index: 9999;
+  height: 700px;
+  width: 80%;
+  max-width: calc(1200px - 30px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -53%);
+  @media (max-width: 670px) {
+    height: 600px;
+  }
+  @media (max-height: 700px) {
+    height: 500px;
+  }
+
+  &::before {
+    content: "";
     position: fixed;
-    z-index: 9999;
-    height: 700px;
-    width: 80%;
-    max-width: calc(1200px - 30px);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -53%);
-    @media (max-width: 670px) {
-        height: 600px;
-    }
-    @media (max-height: 700px) {
-        height: 500px;
-    }
-
-    
-    &::before {
-        content: "";
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        background: rgba(#000, $alpha: 0.5);
-        backdrop-filter: blur(3px);
-        transform: scale(5);
-        z-index: -1;
-    }
-    .tabs {
-        height: 100%;
-        width: 100%;
-        background-color: $Color-Dark-blue;
-        &__menu {
-            padding: 0 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &__item {
-                display: flex;
-                margin: 10px 0;
-                li {
-                    display: flex;
-                    align-items: center;
-                    margin-right: 15px;
-                    span {
-                        padding-left: 3px;
-                        @media (max-width: 670px) {
-                            display: none;
-                        }
-                    }
-                }
+    height: 100%;
+    width: 100%;
+    background: rgba(#000, $alpha: 0.5);
+    backdrop-filter: blur(3px);
+    transform: scale(5);
+    z-index: -1;
+  }
+  .tabs {
+    height: 100%;
+    width: 100%;
+    background-color: $Color-Dark-blue;
+    &__menu {
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__item {
+        display: flex;
+        margin: 10px 0;
+        li {
+          display: flex;
+          align-items: center;
+          margin-right: 15px;
+          span {
+            padding-left: 3px;
+            @media (max-width: 670px) {
+              display: none;
             }
+          }
         }
-        &__content {
-            height: 100%;
-
-            iframe {
-                width: 100%;
-                height: 100%;
-            }
-        }
+      }
     }
+    &__content {
+      height: 100%;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
 
 .active {
-    color: $Color-Orange;
+  color: $Color-Orange;
 }
 
 li,
 .close {
-    cursor: pointer;
-    transition: 0.35s all ease-in-out;
+  cursor: pointer;
+  transition: 0.35s all ease-in-out;
 }
 
 li:hover,
 .close:hover {
-    color: $Color-Orange;
+  color: $Color-Orange;
 }
