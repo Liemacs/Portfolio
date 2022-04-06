@@ -8,13 +8,21 @@
     max-width: calc(1200px - 30px);
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -53%);
+    @media (max-width: 670px) {
+        height: 600px;
+    }
+    @media (max-height: 700px) {
+        height: 500px;
+    }
+
+    
     &::before {
         content: "";
         position: fixed;
         height: 100%;
         width: 100%;
-        background: rgba($Color-Dark-blue, $alpha: 0.8);
+        background: rgba(#000, $alpha: 0.5);
         backdrop-filter: blur(3px);
         transform: scale(5);
         z-index: -1;
@@ -30,6 +38,7 @@
             justify-content: space-between;
             &__item {
                 display: flex;
+                margin: 10px 0;
                 li {
                     display: flex;
                     align-items: center;

@@ -39,7 +39,16 @@
   &__about {
     &__content {
       display: flex;
+      @media (max-width: 560px) {
+        display: block;
+        text-align: center;
+        &__info{
+          text-align: left;
+          padding: 15px 0;
+        }
+      }
       &__img {
+        display: inline-block;
         height: 150px;
         min-width: 150px;
         border-radius: 50%;
