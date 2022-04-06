@@ -15,6 +15,7 @@ import { CgFigma } from "react-icons/cg";
 import { MdVolunteerActivism } from "react-icons/md";
 import { FaFire } from "react-icons/fa";
 import { FaBrain } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 import cv from "./../assets/cv.pdf";
 
@@ -203,7 +204,7 @@ const Resume = () => {
       <div className={classes.resume__apps}>
         <h4>Applications</h4>
         <Slider
-          slidesToShow={size.width < 650 ? 2 : 3}
+          slidesToShow={size.width < 650 ? (size.width < 375 ? 1 : 2) : 3}
           speed={500}
           autoplay
           infinite
@@ -330,7 +331,7 @@ const Resume = () => {
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/learning/certificates/fa130164c6ed902f7f1630510deb231b434b7d4e5aeb4c7456ad1317d3b3c049?trk=share_certificate"
               >
-                SQL Essential Training
+                SQL Essential Training <FiExternalLink size="10" />
               </a>
               <h6
                 className={classes.resume__activity__groups__data__description}
@@ -345,7 +346,7 @@ const Resume = () => {
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/learning/certificates/33ed0f5fe611aeb8c1895276bf8de475d871675635d05d3f30bfaebdb9a57fb5?trk=share_certificate"
               >
-                XML Essential Training
+                XML Essential Training <FiExternalLink size="10" />
               </a>
               <h6
                 className={classes.resume__activity__groups__data__description}
@@ -360,7 +361,7 @@ const Resume = () => {
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/learning/certificates/172ac536a5f31541cdff3923cbb8d720e9c0a74376a07c87bb62c9c70aa894b7?u=2046028"
               >
-                Gradle Training
+                Gradle Training <FiExternalLink size="10" />
               </a>
               <h6
                 className={classes.resume__activity__groups__data__description}
@@ -375,7 +376,7 @@ const Resume = () => {
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/learning/certificates/7fac68ff21f70380cfebaedfeea18faeca5356d6d5c6cbd2c27bd7a20ce20081?trk=share_certificate"
               >
-                Groovy Training
+                Groovy Training <FiExternalLink size="10" />
               </a>
               <h6
                 className={classes.resume__activity__groups__data__description}
@@ -390,7 +391,7 @@ const Resume = () => {
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/learning/certificates/e934428524d9968ad208b4ecf6aa901fda48daf3bfd788f2b8d6c504c3eb8fbe?u=2046028"
               >
-                Continuous Delivery with GitLab
+                Continuous Delivery with GitLab <FiExternalLink size="10" />
               </a>
               <h6
                 className={classes.resume__activity__groups__data__description}
@@ -405,7 +406,7 @@ const Resume = () => {
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/learning/certificates/0d8f944e68f29fec0a4710339d44f8e8ef1be925f44303c233c51c01ea376ddd?u=2046028"
               >
-                GitLab Training
+                GitLab Training <FiExternalLink size="10" />
               </a>
               <h6
                 className={classes.resume__activity__groups__data__description}
@@ -420,7 +421,7 @@ const Resume = () => {
                 rel="noopener noreferrer"
                 href="https://drive.google.com/file/d/1km_1y67tuS6VT6IdhGIhtW8q9xZjoMqP/view"
               >
-                IT Essentials Cisco
+                IT Essentials Cisco <FiExternalLink size="10" />
               </a>
               <h6
                 className={classes.resume__activity__groups__data__description}
@@ -477,19 +478,35 @@ const Resume = () => {
         <h4>interests</h4>
         <div className={classes.resume__interests__content}>
           <div className={classes.resume__interests__content__item}>
-              <h3><MdVolunteerActivism size='30px' className={classes.iconStyle}/>Volunteering</h3>
-              <p>Sometimes it makes me happy when I can make someone else smile.</p>
+            <h3>
+              <MdVolunteerActivism size="30px" className={classes.iconStyle} />
+              Volunteering
+            </h3>
+            <p>
+              Sometimes it makes me happy when I can make someone else smile.
+            </p>
           </div>
           <div className={classes.resume__interests__content__item}>
-              <h3><FaFire size='30px' className={classes.iconStyle}/>Camping</h3>
-              <p>I love to spend time at the fire with my friends, to play guitar songs and tell various stories from the past.</p>
+            <h3>
+              <FaFire size="30px" className={classes.iconStyle} />
+              Camping
+            </h3>
+            <p>
+              I love to spend time at the fire with my friends, to play guitar
+              songs and tell various stories from the past.
+            </p>
           </div>
           <div className={classes.resume__interests__content__item}>
-              <h3><FaBrain size='30px' className={classes.iconStyle}/>Learn new things</h3>
-              <p>"Pump your brains" - I am fascinated by new things, especially in the world of technology.</p>
+            <h3>
+              <FaBrain size="30px" className={classes.iconStyle} />
+              Learn new things
+            </h3>
+            <p>
+              "Pump your brains" - I am fascinated by new things, especially in
+              the world of technology.
+            </p>
           </div>
         </div>
-
       </div>
     </div>
   );
