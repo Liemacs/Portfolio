@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Glitch from "../components/Glitch";
 import DynamicText from "../components/DynamicText";
 import Items from "../components/Items";

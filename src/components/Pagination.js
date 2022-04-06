@@ -3,7 +3,7 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
-import classes from './styles/Pagination.module.scss'
+import classes from "./styles/Pagination.module.scss";
 
 const Pagination = ({ itemsPerPage, totalItems, paginate, next, prev }) => {
   const pageNumbers = [];
@@ -23,9 +23,9 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, next, prev }) => {
             key={number}
             onClick={(e) => (paginate(number), e.preventDefault())}
           >
-            <a href="#" onClick={(e) => e.preventDefault()}>
+            <span>
               {number}
-            </a>
+            </span>
           </li>
         ))}
         <button onClick={next}>

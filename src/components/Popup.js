@@ -75,8 +75,8 @@ const Popup = ({ item, active, setActive }) => {
           />
         </div>
         <div className={classes.tabs__content}>
-          {layout == 0 && <iframe src={item.url} frameBorder="0"></iframe>}
-          {(layout == 1 || layout == 2 || layout == 3) && (
+          {layout === 0 && <iframe src={item.url} title="myFrame" frameBorder="0"></iframe>}
+          {(layout === 1 || layout === 2 || layout === 3) && (
             <Preview  conf={conf} />
           )}
         </div>

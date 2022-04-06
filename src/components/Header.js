@@ -15,9 +15,10 @@ const Header = () => {
     width: undefined,
     heigt: undefined,
   });
+  
+  size.width = window.innerWidth;
 
   useEffect(() => {
-    size.width = window.innerWidth;
     const handleResize = () => {
       setSize({
         width: window.innerWidth,

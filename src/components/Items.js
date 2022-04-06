@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./styles/Items.module.scss";
 
 import Popup from "./Popup";
@@ -8,6 +8,11 @@ import Card from "./Card";
 const Items = ({ items }) => {
   const [itemData, setItemData] = useState(items[1]);
   const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    if (active === true) document.body.style.overflowY = "hidden";
+    else document.body.style.overflowY = "auto";
+  }, [active]);
 
   const list = items.map((item, index) => (
     <Card

@@ -21,9 +21,9 @@ import cv from "./../assets/cv.pdf";
 const Resume = () => {
   const [size, setSize] = useState({ width: undefined });
 
-  useEffect(() => {
-    size.width = window.innerWidth;
+  size.width = window.innerWidth;
 
+  useEffect(() => {
     const handleResize = () => {
       setSize({
         width: window.innerWidth,
