@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
+
+// import SMTP mailer
 import emailjs from "@emailjs/browser";
 
-import DynamicText from "../components/DynamicText";
-import Glitch from "../components/Glitch";
+// import components
+import { DynamicText, Glitch } from "../components";
+
+// import styles
 import classes from "./stylePages/Contacts.module.scss";
 
+// import react-icon
 import { AiFillPhone } from "react-icons/ai";
 import { SiMaildotru } from "react-icons/si";
 import { FaPaperPlane } from "react-icons/fa";
@@ -20,15 +25,16 @@ document.addEventListener(
 );
 
 const Contacts = () => {
+  // start useState variables
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [send, setSend] = useState(false);
+  // end useState variables
 
-  const toggleSend = () => {
-    setSend(!send);
-  };
+  const form = useRef();
 
+  // if all goes well, the airplane icon gets display none
   useEffect(() => {
     if (send === true) {
       const timer = setTimeout(() => {
@@ -38,16 +44,23 @@ const Contacts = () => {
     }
   }, [send]);
 
+  // when the "name" field is changed, the danger message disappears
   useEffect(() => {
     document.getElementById("name").classList.remove("inputText");
     setIsValid(false);
   }, [inputName]);
 
+  // when the "email" field is changed, the danger message disappears
   useEffect(() => {
     document.getElementById("email").classList.remove("inputText");
     setIsValid(false);
   }, [inputEmail]);
 
+  const toggleSend = () => {
+    setSend(!send);
+  };
+
+  // checking data validity and clearing fields
   const checkTextInput = () => {
     if (inputName === "" && inputEmail === "") {
       document.getElementById("name").classList.add("inputText");
@@ -75,8 +88,7 @@ const Contacts = () => {
     }
   };
 
-  const form = useRef();
-
+  // SMTP method
   const sendEmail = (e) => {
     e.preventDefault();
 

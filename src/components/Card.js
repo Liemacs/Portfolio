@@ -1,13 +1,15 @@
 import React from "react";
+
+// import styles
 import classes from "./styles/Card.module.scss";
 
+// import react-icon
 import { AiOutlineEye } from "react-icons/ai";
 
 const Card = ({ item, setItemData, setActive }) => {
   return (
-    <div href=""
-      onClick={(e) => {
-        e.preventDefault();
+    <div
+      onClick={() => {
         setItemData(item);
         setActive(true);
       }}

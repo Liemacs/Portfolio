@@ -1,30 +1,39 @@
-import React, { useState} from "react";
-import Glitch from "../components/Glitch";
-import DynamicText from "../components/DynamicText";
-import Items from "../components/Items";
-import Pagination from "../components/Pagination";
+import React, { useState } from "react";
 
+// import components
+import { Glitch, DynamicText, Items, Pagination } from "../components";
+
+// import data
 import Data from "../assets/data.js";
 
+// import react-icon
 import { BiMouse } from "react-icons/bi";
+
+// import styles
 import classes from "./stylePages/Home.module.scss";
 
 const Home = () => {
+  // start useState variables
   const [items] = useState(Data);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(6);
+  // end useState variables
 
+  // Variabiles
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
   const currentItem = items.slice(firstItemIndex, lastItemIndex);
+  // End variabiles
 
+  // Functions
   const paginate = (pageNamber) => setCurrentPage(pageNamber);
 
   const nextPage = () =>
     setCurrentPage((prev) => (lastItemIndex < items.length ? prev + 1 : prev));
   const prevPage = () =>
     setCurrentPage((prev) => (currentPage === 1 ? prev : prev - 1));
-    
+  // End functions
+
   return (
     <main className={classes.main}>
       <div className={classes.main__content}>
@@ -35,7 +44,7 @@ const Home = () => {
           </DynamicText>
         </span>
         <div className={classes.main__content__arrowDown}>
-          <div className={classes.mouse} >
+          <div className={classes.mouse}>
             <BiMouse />
           </div>
         </div>

@@ -1,11 +1,16 @@
 import React from "react";
 
+// import monaco editor
 import Editor from "@monaco-editor/react";
 
 const Preview = ({ conf }) => {
   let value = "";
+
+  // concatenation of the lines obtained from the table in the date.js
   let code = conf.data;
-  code.forEach((obj) => {value += obj += "\n"});
+  code.forEach((obj) => {
+    value += obj += "\n";
+  });
 
   return (
     <Editor

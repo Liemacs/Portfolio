@@ -1,12 +1,15 @@
 import React from "react";
 
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-
+// import styles
 import classes from "./styles/Pagination.module.scss";
+
+// import react-icon
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Pagination = ({ itemsPerPage, totalItems, paginate, next, prev }) => {
   const pageNumbers = [];
+
+  // render the page numbers
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
@@ -23,9 +26,7 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, next, prev }) => {
             key={number}
             onClick={(e) => (paginate(number), e.preventDefault())}
           >
-            <span>
-              {number}
-            </span>
+            <span>{number}</span>
           </li>
         ))}
         <button onClick={next}>

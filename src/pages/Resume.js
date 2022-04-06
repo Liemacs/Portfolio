@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from "react";
-import DynamicText from "../components/DynamicText";
-import Glitch from "../components/Glitch";
+
+// import components
+import { Glitch, DynamicText } from "../components";
+
+// import slick-carousel
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+// import styles
 import classes from "./stylePages/Resume.module.scss";
 
-import { SiAdobephotoshop } from "react-icons/si";
-import { SiAdobeillustrator } from "react-icons/si";
-import { SiAdobexd } from "react-icons/si";
-import { SiAutodesk } from "react-icons/si";
+// import react-icon
+import {
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiAdobexd,
+  SiAutodesk,
+} from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { MdVolunteerActivism } from "react-icons/md";
-import { FaFire } from "react-icons/fa";
-import { FaBrain } from "react-icons/fa";
+import { FaFire, FaBrain } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
+// import my CV
 import cv from "./../assets/cv.pdf";
 
 const Resume = () => {
@@ -24,6 +31,7 @@ const Resume = () => {
 
   size.width = window.innerWidth;
 
+  // write the screen width change
   useEffect(() => {
     const handleResize = () => {
       setSize({

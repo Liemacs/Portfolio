@@ -1,25 +1,26 @@
-import React, { useState} from "react";
-import Preview from "./Preview";
+import React, { useState } from "react";
 
+// import components
+import { Preview } from "./index";
+
+// import styles
 import classes from "./styles/Popup.module.scss";
 
-import { AiFillLayout } from "react-icons/ai";
-import { AiFillHtml5 } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
+// import react-icon
+import { AiFillLayout, AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { DiCss3Full } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
 import { FaTimesCircle } from "react-icons/fa";
 
-const Popup = ({ item, active, setActive }) => {
+const Popup = ({ item, setActive }) => {
   const [layout, setLayout] = useState(0);
-
   const [conf, setConf] = useState({
     data: item.html,
     language: "html",
   });
 
   return (
-    <div  className={classes.popup}>
+    <div className={classes.popup}>
       <div className={classes.tabs}>
         <div className={classes.tabs__menu}>
           <ul className={classes.tabs__menu__item}>
@@ -75,9 +76,11 @@ const Popup = ({ item, active, setActive }) => {
           />
         </div>
         <div className={classes.tabs__content}>
-          {layout === 0 && <iframe src={item.url} title="myFrame" frameBorder="0"></iframe>}
+          {layout === 0 && (
+            <iframe src={item.url} title="myFrame" frameBorder="0"></iframe>
+          )}
           {(layout === 1 || layout === 2 || layout === 3) && (
-            <Preview  conf={conf} />
+            <Preview conf={conf} />
           )}
         </div>
       </div>

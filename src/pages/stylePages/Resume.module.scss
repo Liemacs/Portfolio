@@ -42,7 +42,7 @@
       @media (max-width: 560px) {
         display: block;
         text-align: center;
-        &__info{
+        &__info {
           text-align: left;
           padding: 15px 0;
         }
@@ -242,11 +242,11 @@
           }
         }
         @media (max-width: 832.99px) {
-          &:first-child{
+          &:first-child {
             margin-top: 0;
           }
-            margin-top: 40px;
-            max-width: 100%;
+          margin-top: 40px;
+          max-width: 100%;
         }
         h3 {
           display: flex;

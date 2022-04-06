@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
-import classes from "./styles/Header.module.scss";
 
+// import links
 import { Link } from "react-router-dom";
 
+// import styles
+import classes from "./styles/Header.module.scss";
+
+// import react-icon
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { SiFreelancer } from "react-icons/si";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,9 +18,11 @@ const Header = () => {
     width: undefined,
     heigt: undefined,
   });
-  
+
+  // setting the initial value for the window size when it opens
   size.width = window.innerWidth;
 
+  // setting the value for the window size when it changes
   useEffect(() => {
     const handleResize = () => {
       setSize({
@@ -26,18 +31,21 @@ const Header = () => {
       });
     };
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // hidden menu when window size is larger 768
   useEffect(() => {
     if (size.width > 768 && menuOpen) {
       setMenuOpen(false);
     }
   }, [size.width, menuOpen]);
 
+  // hidden/show menu
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
   };
+
   return (
     <header className={classes.header}>
       <div className={classes.header__content}>

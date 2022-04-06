@@ -1,8 +1,9 @@
 import React from "react";
+
+// import type writer
 import { Typewriter } from "react-simple-typewriter";
 
-
-const DynamicText = ({children}) => {
+const DynamicText = ({ children }) => {
   return (
     <Typewriter
       loop

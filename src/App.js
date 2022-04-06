@@ -1,13 +1,15 @@
 import React from "react";
+
+// import react-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Layout from "./components/Layout";
-
+// import components
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Contacts from "./pages/Contacts";
 import NotFoundPage from "./pages/NotFoundPage";
 
+import Layout from "./components/Layout";
 
 function App() {
   return (
