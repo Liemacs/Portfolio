@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />}></Route>
+          <Route index element={<Resume />}></Route>
           <Route path="Resume" element={<Resume />}></Route>
           <Route path="Contacts" element={<Contacts />}></Route>
           <Route path="*" element={<NotFoundPage />}></Route>

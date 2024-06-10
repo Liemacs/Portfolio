@@ -16,8 +16,9 @@ import {
   SiAdobephotoshop,
   SiAdobeillustrator,
   SiAdobexd,
-  SiAutodesk,
+  SiVmware,
 } from "react-icons/si";
+import { FaGitlab } from "react-icons/fa6";
 import { CgFigma } from "react-icons/cg";
 import { MdVolunteerActivism } from "react-icons/md";
 import { FaFire, FaBrain } from "react-icons/fa";
@@ -61,15 +62,12 @@ const Resume = () => {
           </div>
           <div className={classes.resume__about__content__info}>
             <p>
-              I am an enthusiastic and detail-oriented front-ent programmer
-              looking for an entry-level position to use my skills of coding and
-              of troubleshooting as well as to assist timely completion of
-              projects.
+              I am a passionate and experienced software engineer with nearly 3 years of expertise in DevOps, now seeking a position as a web developer. Having worked extensively as a freelancer, I have hands-on experience with frameworks such as Laravel and React. Additionally, I possess skills in creating animations using GSAP and 3D objects with Spline. I am eager to leverage my coding and troubleshooting abilities to contribute to the timely completion of projects and drive innovation in a dynamic development environment.
             </p>
             <div className={classes.resume__about__content__info__data}>
               <div>
                 <span>Age:</span>
-                <p>22</p>
+                <p>24</p>
               </div>
               <div>
                 <span>Freelance:</span>
@@ -77,7 +75,7 @@ const Resume = () => {
               </div>
               <div>
                 <span>Phone:</span>
-                <p>+373 (60) 53 1017</p>
+                <p>+373 60 53 1017</p>
               </div>
               <div>
                 <span>Email:</span>
@@ -121,18 +119,73 @@ const Resume = () => {
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
-              <h3>Java Script</h3>
-              <span>60%</span>
+              <h3>GSAP</h3>
+              <span>20%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
               <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_60}`}
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_20}`}
+              ></div>
+            </div>
+          </div>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>Java Script</h3>
+              <span>40%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
+              ></div>
+            </div>
+          </div>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>PHP(Laravel)</h3>
+              <span>40%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
               ></div>
             </div>
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
               <h3>React</h3>
+              <span>40%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
+              ></div>
+            </div>
+          </div>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>MSSQL</h3>
+              <span>70%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_70}`}
+              ></div>
+            </div>
+          </div>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>C/C++</h3>
+              <span>40%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
+              ></div>
+            </div>
+          </div>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>Docker</h3>
               <span>60%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
@@ -143,34 +196,12 @@ const Resume = () => {
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
-              <h3>SQL</h3>
-              <span>80%</span>
+              <h3>Shell/Bash</h3>
+              <span>60%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
               <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_80}`}
-              ></div>
-            </div>
-          </div>
-          <div className={classes.resume__skills__box__skillBar}>
-            <div>
-              <h3>C++</h3>
-              <span>40%</span>
-            </div>
-            <div className={classes.resume__skills__box__skillBar__container}>
-              <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
-              ></div>
-            </div>
-          </div>
-          <div className={classes.resume__skills__box__skillBar}>
-            <div>
-              <h3>C#</h3>
-              <span>40%</span>
-            </div>
-            <div className={classes.resume__skills__box__skillBar__container}>
-              <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_60}`}
               ></div>
             </div>
           </div>
@@ -187,7 +218,7 @@ const Resume = () => {
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
-              <h3>PHP</h3>
+              <h3>Linux/Rocky/Ubuntu</h3>
               <span>50%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
@@ -198,12 +229,34 @@ const Resume = () => {
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
-              <h3>Git</h3>
-              <span>60%</span>
+              <h3>Yaml</h3>
+              <span>50%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
               <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_60}`}
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_50}`}
+              ></div>
+            </div>
+          </div>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>SAST/DAST/Depend</h3>
+              <span>50%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_50}`}
+              ></div>
+            </div>
+          </div>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>Gitlab/Github</h3>
+              <span>80%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_80}`}
               ></div>
             </div>
           </div>
@@ -279,10 +332,25 @@ const Resume = () => {
             </svg>
           </div>
           <div
-            className={`${classes.resume__apps__carousel__item} ${classes.degr_60}`}
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_80}`}
           >
             <span>
-              <SiAutodesk size="60" />
+              <FaGitlab size="60" />
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
+          >
+            <span>
+              <SiVmware size="60" />
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -301,11 +369,17 @@ const Resume = () => {
           <div className={classes.resume__activity__groups__data}>
             <div>
               <h5>25.10.2021 - Present</h5>
-              <h6>Software Engineer - Est Computer</h6>
+              <h6>DevOps Developer</h6>
               <h6
                 className={classes.resume__activity__groups__data__description}
               >
-                Integrate the software artifacts with CI/CD frameworks
+                • Unix Systems Administration: Linux, Rocky, Ubuntu.<br></br>
+                • Process Automation: Using YAML. <br></br>
+                • CI/CD Solutions Implementation.<br></br>
+                • Container Management: Creating and managing Docker containers.<br></br>
+                • Virtual Machine Configuration: VMware vRealize Automation 8 (vRA8).<br></br>
+                • Shell/Bash Scripting: Creating and implementing scripts for various OS.<br></br>
+                • Version Control Tools: Git, SVN.
               </h6>
             </div>
             <div>
@@ -314,8 +388,11 @@ const Resume = () => {
               <h6
                 className={classes.resume__activity__groups__data__description}
               >
-                Organized and created content on the web platform of the Enter
-                store
+                • Testing website updates. <br></br>
+                • Bug reports in the management tool like Bitrix24.<br></br>
+                • Working in Adobe Photoshop.<br></br>
+                • Adding new products to the sites (Photo in .png, info about product, video).<br></br>
+                • Working with 1C.
               </h6>
             </div>
           </div>
