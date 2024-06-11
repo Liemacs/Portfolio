@@ -401,7 +401,7 @@ const Resume = () => {
           <h4>EDUCATION</h4>
           <div className={classes.resume__activity__groups__data}>
             <div>
-              <h5>2020 - Present</h5>
+              <h5>2020 - 2022</h5>
               <h6>Software Engineer</h6>
               <h6
                 className={classes.resume__activity__groups__data__description}
