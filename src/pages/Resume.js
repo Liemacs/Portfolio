@@ -50,7 +50,18 @@ const Resume = () => {
         <h1 className={classes.resume__section__title}>Ciubari Maxim</h1>
         <span className={classes.resume__section__typeWriter}>
           <DynamicText>
-            {["I love my job.", "Smile, you have found the right candidate."]}
+            {[
+              "I love my job.",
+              "Smile, you have found the right candidate.",
+              "Passionate about coding and creating solutions.",
+              "Ready to tackle challenges with a positive mindset.",
+              "Innovation and efficiency are my priorities.",
+              "Driven to deliver high-quality results.",
+              "Teamwork makes the dream work!",
+              "Always learning, always growing.",
+              "Let’s build something amazing together.",
+              "Your success is my mission.",
+            ]}
           </DynamicText>
         </span>
       </div>
@@ -62,7 +73,12 @@ const Resume = () => {
           </div>
           <div className={classes.resume__about__content__info}>
             <p>
-              I am a passionate and experienced software engineer with nearly 3 years of expertise in DevOps, now seeking a position as a web developer. Having worked extensively as a freelancer, I have hands-on experience with frameworks such as Laravel and React. Additionally, I possess skills in creating animations using GSAP and 3D objects with Spline. I am eager to leverage my coding and troubleshooting abilities to contribute to the timely completion of projects and drive innovation in a dynamic development environment.
+              "Full Stack Developer specialized in Laravel, with experience in
+              building scalable and efficient web applications. Skilled in
+              backend development (PHP, MySQL) and frontend technologies (HTML,
+              CSS, JavaScript). Proficient in optimizing processes and solving
+              complex problems, committed to project success and delivering
+              solutions that add value to the team and organization."
             </p>
             <div className={classes.resume__about__content__info__data}>
               <div>
@@ -95,6 +111,17 @@ const Resume = () => {
       <div className={classes.resume__skills}>
         <h4>Coding skills</h4>
         <div className={classes.resume__skills__box}>
+          <div className={classes.resume__skills__box__skillBar}>
+            <div>
+              <h3>PHP(Laravel)</h3>
+              <span>60%</span>
+            </div>
+            <div className={classes.resume__skills__box__skillBar__container}>
+              <div
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_60}`}
+              ></div>
+            </div>
+          </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
               <h3>HTML/CSS</h3>
@@ -141,7 +168,7 @@ const Resume = () => {
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
-              <h3>PHP(Laravel)</h3>
+              <h3>Vue.js</h3>
               <span>40%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
@@ -163,7 +190,7 @@ const Resume = () => {
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
-              <h3>MSSQL</h3>
+              <h3>MSSQL/MySQL</h3>
               <span>70%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
@@ -174,45 +201,34 @@ const Resume = () => {
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
-              <h3>C/C++</h3>
+              <h3>Docker</h3>
               <span>40%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
               <div
                 className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
-              ></div>
-            </div>
-          </div>
-          <div className={classes.resume__skills__box__skillBar}>
-            <div>
-              <h3>Docker</h3>
-              <span>60%</span>
-            </div>
-            <div className={classes.resume__skills__box__skillBar__container}>
-              <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_60}`}
               ></div>
             </div>
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
               <h3>Shell/Bash</h3>
-              <span>60%</span>
+              <span>50%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
               <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_60}`}
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_50}`}
               ></div>
             </div>
           </div>
           <div className={classes.resume__skills__box__skillBar}>
             <div>
               <h3>Java</h3>
-              <span>40%</span>
+              <span>30%</span>
             </div>
             <div className={classes.resume__skills__box__skillBar__container}>
               <div
-                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_40}`}
+                className={`${classes.resume__skills__box__skillBar__container__value} ${classes.value_30}`}
               ></div>
             </div>
           </div>
@@ -266,10 +282,12 @@ const Resume = () => {
         <h4>Applications</h4>
         <Slider
           slidesToShow={size.width < 650 ? (size.width < 375 ? 1 : 2) : 3}
-          speed={500}
+          autoplaySpeed={0}
           autoplay
           infinite
           className={classes.resume__apps__carousel}
+          cssEase="ease-in-out"
+          speed={2000}
         >
           <div
             className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
@@ -373,13 +391,14 @@ const Resume = () => {
               <h6
                 className={classes.resume__activity__groups__data__description}
               >
-                • Unix Systems Administration: Linux, Rocky, Ubuntu.<br></br>
-                • Process Automation: Using YAML. <br></br>
-                • CI/CD Solutions Implementation.<br></br>
-                • Container Management: Creating and managing Docker containers.<br></br>
-                • Virtual Machine Configuration: VMware vRealize Automation 8 (vRA8).<br></br>
-                • Shell/Bash Scripting: Creating and implementing scripts for various OS.<br></br>
-                • Version Control Tools: Git, SVN.
+                • Unix Systems Administration: Linux, Rocky, Ubuntu.<br></br>•
+                Process Automation: Using YAML. <br></br>• CI/CD Solutions
+                Implementation.<br></br>• Container Management: Creating and
+                managing Docker containers.<br></br>• Virtual Machine
+                Configuration: VMware vRealize Automation 8 (vRA8).<br></br>•
+                Shell/Bash Scripting: Creating and implementing scripts for
+                various OS.<br></br>• Version Control Tools: Git, SVN.<br></br>•
+                Security Tools: SAST, DAST, and Dependency Scanners.
               </h6>
             </div>
             <div>
@@ -388,11 +407,10 @@ const Resume = () => {
               <h6
                 className={classes.resume__activity__groups__data__description}
               >
-                • Testing website updates. <br></br>
-                • Bug reports in the management tool like Bitrix24.<br></br>
-                • Working in Adobe Photoshop.<br></br>
-                • Adding new products to the sites (Photo in .png, info about product, video).<br></br>
-                • Working with 1C.
+                • Testing website updates. <br></br>• Bug reports in the
+                management tool like Bitrix24.<br></br>• Working in Adobe
+                Photoshop.<br></br>• Adding new products to the sites (Photo in
+                .png, info about product, video).<br></br>• Working with 1C.
               </h6>
             </div>
           </div>
