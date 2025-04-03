@@ -75,8 +75,7 @@ const Resume = () => {
             <p>
               "Full Stack Developer specialized in Laravel, with experience in
               building scalable and efficient web applications. Skilled in
-              backend development (PHP, MySQL) and frontend technologies (HTML,
-              CSS, JavaScript). Proficient in optimizing processes and solving
+              backend development and frontend technologies. Proficient in optimizing processes and solving
               complex problems, committed to project success and delivering
               solutions that add value to the team and organization."
             </p>
