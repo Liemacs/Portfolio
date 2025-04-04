@@ -86,12 +86,12 @@ const Resume = () => {
                 <p>24</p>
               </div>
               <div>
-                <span>Freelance:</span>
-                <p>Avaible</p>
-              </div>
-              <div>
                 <span>Phone:</span>
                 <p>+373 60 53 1017</p>
+              </div>
+              <div>
+                <span>Position:</span>
+                <p>Full Stack Developer</p>
               </div>
               <div>
                 <span>Email:</span>
