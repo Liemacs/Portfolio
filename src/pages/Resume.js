@@ -75,9 +75,10 @@ const Resume = () => {
             <p>
               "Full Stack Developer specialized in Laravel, with experience in
               building scalable and efficient web applications. Skilled in
-              backend development and frontend technologies. Proficient in optimizing processes and solving
-              complex problems, committed to project success and delivering
-              solutions that add value to the team and organization."
+              backend development and frontend technologies. Proficient in
+              optimizing processes and solving complex problems, committed to
+              project success and delivering solutions that add value to the
+              team and organization."
             </p>
             <div className={classes.resume__about__content__info__data}>
               <div>
@@ -277,116 +278,37 @@ const Resume = () => {
           </div>
         </div>
       </div>
-      <div className={classes.resume__apps}>
-        <h4>Applications</h4>
-        <Slider
-          slidesToShow={size.width < 650 ? (size.width < 375 ? 1 : 2) : 3}
-          autoplaySpeed={0}
-          autoplay
-          infinite
-          className={classes.resume__apps__carousel}
-          cssEase="ease-in-out"
-          speed={2000}
-        >
-          <div
-            className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
-          >
-            <span>
-              <SiAdobephotoshop size="60" />
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              width="160px"
-              height="160px"
-            >
-              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div
-            className={`${classes.resume__apps__carousel__item} ${classes.degr_80}`}
-          >
-            <span>
-              <CgFigma size="60" />
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              width="160px"
-              height="160px"
-            >
-              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div
-            className={`${classes.resume__apps__carousel__item} ${classes.degr_40}`}
-          >
-            <span>
-              <SiAdobeillustrator size="60" />
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              width="160px"
-              height="160px"
-            >
-              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div
-            className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
-          >
-            <span>
-              <SiAdobexd size="60" />
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              width="160px"
-              height="160px"
-            >
-              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div
-            className={`${classes.resume__apps__carousel__item} ${classes.degr_80}`}
-          >
-            <span>
-              <FaGitlab size="60" />
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              width="160px"
-              height="160px"
-            >
-              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div
-            className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
-          >
-            <span>
-              <SiVmware size="60" />
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              width="160px"
-              height="160px"
-            >
-              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
-            </svg>
-          </div>
-        </Slider>
-      </div>
       <div className={classes.resume__activity}>
         <div className={classes.resume__activity__groups}>
           <h4>EXPERIENCE</h4>
           <div className={classes.resume__activity__groups__data}>
             <div>
-              <h5>25.10.2021 - Present</h5>
-              <h6>DevOps Developer</h6>
+              <h5>01.03.2024 - Present</h5>
+              <h6>Preon Mode - Full Stack developer</h6>
+              <h6
+                className={classes.resume__activity__groups__data__description}
+              >
+                • Full-stack development using React, Laravel, Vue.js, MySQL,
+                and JavaScript.
+                <br />
+                • Responsible for architecture, scalability and code quality of
+                web projects.
+                <br />
+                • Integrating client-specific solutions, API connections, and
+                third-party tools (e.g. JetStream, Postman).
+                <br />
+                • Website design (UI/UX) and deployment on modern hosting
+                platforms.
+                <br />
+                • Performance optimization and best practices in modern web
+                development.
+                <br />• Leading technical planning and execution for Preon
+                Mode's digital direction.
+              </h6>
+            </div>
+            <div>
+              <h5>25.10.2021 - 18.01.2025</h5>
+              <h6>Edifecs - DevOps Developer</h6>
               <h6
                 className={classes.resume__activity__groups__data__description}
               >
@@ -575,6 +497,109 @@ const Resume = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={classes.resume__apps}>
+        <h4>Applications</h4>
+        <Slider
+          slidesToShow={size.width < 650 ? (size.width < 375 ? 1 : 2) : 3}
+          autoplaySpeed={0}
+          autoplay
+          infinite
+          className={classes.resume__apps__carousel}
+          cssEase="ease-in-out"
+          speed={2000}
+        >
+          <div
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
+          >
+            <span>
+              <SiAdobephotoshop size="60" />
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_80}`}
+          >
+            <span>
+              <CgFigma size="60" />
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_40}`}
+          >
+            <span>
+              <SiAdobeillustrator size="60" />
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
+          >
+            <span>
+              <SiAdobexd size="60" />
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_80}`}
+          >
+            <span>
+              <FaGitlab size="60" />
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div
+            className={`${classes.resume__apps__carousel__item} ${classes.degr_50}`}
+          >
+            <span>
+              <SiVmware size="60" />
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <circle cx="80" cy="80" r="70" strokeLinecap="round" />
+            </svg>
+          </div>
+        </Slider>
       </div>
       <div className={classes.resume__interests}>
         <h4>interests</h4>
