@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // import components
-import { Glitch, DynamicText } from "../components";
+import { Glitch, DynamicText, Card } from "../components";
 
 // import slick-carousel
 import "slick-carousel/slick/slick.css";
@@ -23,12 +23,26 @@ import { CgFigma } from "react-icons/cg";
 import { MdVolunteerActivism } from "react-icons/md";
 import { FaFire, FaBrain } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import Data from "../assets/projects.js";
 
 // import my CV
 import cv from "./../assets/cv.pdf";
 
 const Resume = () => {
+  const [items] = useState(Data);
+
   const [size, setSize] = useState({ width: undefined });
+  const [itemData, setItemData] = useState(items[1]);
+  const [active, setActive] = useState(false);
+
+  const list = items.map((item, index) => (
+    <Card
+      item={item}
+      setItemData={setItemData}
+      setActive={setActive}
+      key={`${item.id}_${index}`}
+    />
+  ));
 
   size.width = window.innerWidth;
 
@@ -276,6 +290,14 @@ const Resume = () => {
               ></div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={classes.resume__projects}>
+        <h4>Portfolio</h4>
+        <div
+          className={classes.cards}
+        >
+          {list}
         </div>
       </div>
       <div className={classes.resume__activity}>

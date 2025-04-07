@@ -338,3 +338,32 @@
 .circle_25:after {
   clip-path: polygon(0 0, 25% 0, 50% 50%, 0% 50%);
 }
+
+
+.resume__projects {
+  padding: 1rem;
+}
+
+.resume__projects h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Fiecare card ocupă spațiu flexibil */
+.cards > * {
+  flex: 1 1 calc(33.333% - 1rem); /* 3 pe rând cu gap */
+  min-width: 250px;               /* fallback pe ecrane mici */
+}
+
+/* Responsive – pe ecrane sub 768px (mobil) */
+@media (max-width: 768px) {
+  .cards > * {
+    flex: 1 1 100%;
+  }
+}

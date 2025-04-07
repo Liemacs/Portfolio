@@ -5,11 +5,17 @@ import classes from "./styles/Card.module.scss";
 
 // import react-icon
 import { AiOutlineEye } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Card = ({ item, setItemData, setActive }) => {
   return (
-    <div
-      onClick={() => {
+    <Link
+      to={item.href}
+      onClick={(e) => {
+        e.preventDefault(); 
+
+        window.open(item.href, "_blank", "noopener,noreferrer");
+
         setItemData(item);
         setActive(true);
       }}
@@ -19,11 +25,11 @@ const Card = ({ item, setItemData, setActive }) => {
         <img src={item.img} alt="item" />
         <div className={classes.cart__content__more}>
           <AiOutlineEye size="30" className={classes.iconStyle} />
-          <p>Preview</p>
+          <p>Demo</p>
         </div>
       </div>
       <p>{item.title}</p>
-    </div>
+    </Link>
   );
 };
 

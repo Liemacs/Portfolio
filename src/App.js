@@ -4,7 +4,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import components
-import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Contacts from "./pages/Contacts";
 import NotFoundPage from "./pages/NotFoundPage";

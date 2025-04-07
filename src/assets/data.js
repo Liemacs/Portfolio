@@ -2,7 +2,7 @@ const data = [
   {
     id: "0",
     title: "BlueBank",
-    img: require("./img/pages/img_0.jpg"),
+    img: require("./img/pages/img-0.png"),
     url: "./sites/BlueBank/index.html",
     html: [
       "<!DOCTYPE html>",
@@ -885,7 +885,7 @@ const data = [
   {
     id: "1",
     title: "FJORD",
-    img: require("./img/pages/img_1.jpg"),
+    img: require("./img/pages/img-0.png"),
     url: "./sites/HtmlFinalWork/index.html",
     html: [
       "<!DOCTYPE html>",
