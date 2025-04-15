@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 
 // import components
 import { Glitch, DynamicText, Card } from "../components";
+
+// import SMTP mailer
+import emailjs from "@emailjs/browser";
 
 // import slick-carousel
 import "slick-carousel/slick/slick.css";
@@ -57,6 +60,25 @@ const Resume = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    console.log("Se trimite email...");
+    emailjs
+      .send(
+        "service_lzzkplc",
+        "template_pmic82h",
+        { message: "Cineva a vizionat CV-ul" },
+        "w69Y_igKHkkPHsLUe"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }, [])
 
   return (
     <div className={classes.resume}>
@@ -294,11 +316,7 @@ const Resume = () => {
       </div>
       <div className={classes.resume__projects}>
         <h4>Portfolio</h4>
-        <div
-          className={classes.cards}
-        >
-          {list}
-        </div>
+        <div className={classes.cards}>{list}</div>
       </div>
       <div className={classes.resume__activity}>
         <div className={classes.resume__activity__groups}>

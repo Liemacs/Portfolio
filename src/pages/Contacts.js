@@ -95,7 +95,7 @@ const Contacts = () => {
     emailjs
       .sendForm(
         "service_lzzkplc",
-        "template_pmic82h",
+        "template_gy2jqfe",
         form.current,
         "w69Y_igKHkkPHsLUe"
       )
